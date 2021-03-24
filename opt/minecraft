@@ -24,6 +24,7 @@ fi
 
 # create server config
 echo "server-port=${mc_port}" >> /app/server.properties
+echo "online-mode=false" >> /app/server.properties
 for f in whitelist banned-players banned-ips ops; do
   test ! -f $f.json && echo -n "[]" > $f.json
 done
